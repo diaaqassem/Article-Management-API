@@ -1,5 +1,3 @@
-# Jenkins Plugin (npm, docker, slack notification)
-
 def COLOR_MAP = [
     'SUCCESS': 'good', 
     'FAILURE': 'danger',
@@ -10,12 +8,9 @@ pipeline{
     }
     tools{
         nodejs "Nodejs"
-        docker "Docker"
+        dockerTool 'Docker'
     }
     environment{
-        MONGODB_URI="mongodb://172.17.0.3/?directConnection=true"
-        PORT=5000
-        MONGODB_NAME="Articles"
         DOCKER_CREDENTIALS="docker-hub-credentials"
         DOCKER_IMAGE="diaaqassem1/article"
     }
