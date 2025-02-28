@@ -201,6 +201,15 @@ GET /api/articles/67331fb41a0233384bf12f87
 
 ---
 
+- Docker:
+
+   ```bash
+   docker run -e PORT=5000 -e MONGODB_URI=your_mongodb_connection_string -e MONGODB_NAME="Articles" -p 5000:5000 diaaqassem1/article
+
+   ```
+
+---
+
 ## Technologies Used
 
 - **Node.js**: JavaScript runtime environment
@@ -208,5 +217,6 @@ GET /api/articles/67331fb41a0233384bf12f87
 - **MongoDB**: NoSQL database
 - **Mongoose**: MongoDB object modeling tool
 - **dotenv**: For environment variable management
-
+- **Jenkins**: Fetch and Build Code
+- **Docker**: Build App Image
 ---
